@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Student Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h2>Student Store</h2>
+
+  <div>
+    <button class="dark-btn" onclick="document.body.classList.toggle('dark')">
+      🌙
+    </button>
+  </div>
+</div>
+<div class="auth-container">
+  <h2>Register</h2>
+
+  <input type="text" id="name" placeholder="Enter Name">
+  <input type="email" id="email" placeholder="Enter Email">
+  <input type="password" id="password" placeholder="Enter Password">
+
+  <button onclick="register()">Register</button>
+
+  <p class="auth-link">
+    Already have an account? <a href="login.html">Login</a>
+  </p>
+</div>
+
+<script>
+function register() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if (!name || !email || !password) {
+    alert("Fill all fields");
+    return;
+  }
+
+  localStorage.setItem("user", email);
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

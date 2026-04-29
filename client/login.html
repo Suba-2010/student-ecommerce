@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Student Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 🔵 Navbar -->
+<div class="navbar">
+  <h2>Student Store</h2>
+
+  <div>
+    <button class="dark-btn" onclick="document.body.classList.toggle('dark')">
+      🌙
+    </button>
+  </div>
+</div><!-- 🔐 Login Card -->
+<div class="auth-container">
+  <h2>Login</h2>
+
+  <input type="email" id="email" placeholder="Enter Email">
+  <input type="password" id="password" placeholder="Enter Password">
+
+  <button onclick="login()">Login</button>
+
+  <p class="auth-link">
+    Don't have an account? <a href="register.html">Register</a>
+  </p>
+</div>
+
+<script>
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if (!email || !password) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  // simple login (for now)
+  localStorage.setItem("user", email);
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

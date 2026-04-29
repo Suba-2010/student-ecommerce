@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Orders</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 🔐 Login Protection -->
+<script>
+if (!localStorage.getItem("user")) {
+  window.location.href = "login.html";
+}
+</script>
+
+<!-- 🔵 NAVBAR -->
+<div class="navbar">
+  <h2>Student Store</h2>
+
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart</a>
+    <a href="#" onclick="logout()">Logout</a>
+     <button onclick="document.body.classList.toggle('dark')">🌙</button>
+  </div>
+</div>
+
+<!-- 🧾 TITLE -->
+<h1 style="text-align:center; margin-top:30px;">📦 Your Orders</h1>
+
+<!-- 📦 ORDERS LIST -->
+<div id="order-list"></div>
+
+<!-- 🧠 EMPTY MESSAGE -->
+<p id="empty-msg" style="text-align:center; color:gray; display:none;">
+  No orders yet 😢
+</p>
+
+<!-- ⚙️ SCRIPT -->
+<script src="js/orders.js"></script>
+
+<script>
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

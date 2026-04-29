@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h2>Student Store</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="orders.html">Orders</a>
+    <a href="#" onclick="logout()">Logout</a>
+     <button onclick="document.body.classList.toggle('dark')">🌙</button>
+  </div>
+</div>
+
+<h1>Your Cart</h1>
+
+<div id="cart-list"></div>
+
+<script src="js/cart.js"></script>
+
+<script>
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
