@@ -72,7 +72,7 @@ npm install
 ### 3️⃣ Create `.env` file inside `server/`
 
 
-MONGO_URI=mongodb://127.0.0.1:27017/studentDB
+MONGO_URI=mongodb+srv://suba2007:Suba%402007@cluster0.gwotpab.mongodb.net/studentDB?retryWrites=true&w=majority
 PORT=5000
 
 
@@ -119,14 +119,8 @@ client/index.html
 - Build: `npm install`
 - Start: `node server.js`
 
-### Frontend (Vercel / Netlify)
+### Frontend (Vercel)
 - Upload `client` folder
-
----
-
-## 📸 Screenshots
-
-(Add your project screenshots here)
 
 ---
 
